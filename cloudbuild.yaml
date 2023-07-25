@@ -1,0 +1,9 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'eu.gcr.io/infinipoint/vuls-gost-update-fork:v0.44', '.' ]
+images:
+  - 'eu.gcr.io/infinipoint/vuls-gost-update-fork:v0.44'
+timeout: 1200s
+options:
+  logging: GCS_ONLY
+  logStreamingOption: STREAM_ON
